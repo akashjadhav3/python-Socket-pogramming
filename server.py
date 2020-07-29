@@ -9,3 +9,7 @@ s.listen(5)
 
 socketClient , address = s.accept()
 print("got connection from ",address)
+
+msg = socketClient.recv(1024) #1024 bytes
+msg = msg.decode('utf-8')
+print(msg)
